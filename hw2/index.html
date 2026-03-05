@@ -214,7 +214,7 @@
 		<h3>Part 6: Loop subdivision for mesh upsampling</h3>
 		<p>
 			I implemented loop subdivision by following the steps described in the assignment. First, I computed the updated positions for all original vertices 
-			using the Loop subdivision weighting and stored the result in <code>Vertex::newPosition</code>. I then computed the positions of new vertices that
+			using the loop subdivision weighting and stored the result in <code>Vertex::newPosition</code>. I then computed the positions of new vertices that
 			would be inserted on edges using <code>(3/8)*(A+B) + (1/8)*(C+D)</code> which was then stored in <code>Edge::newPosition</code>.
 		</p>
 
@@ -225,7 +225,7 @@
 		</p>
 
 		<p>
-			After several iterations of Loop subdivision, sharp edges and corners become smoother because my implementation moves vertices twoard the average
+			After several iterations of loop subdivision, sharp edges and corners become smoother because my implementation moves vertices twoard the average
 			of their neighbors. When subdividing the cube, the mesh becomes asymmetric due to the diagonal triangulation of each face. Knowing this, the solution is quite simple.
 			All that needed to be done was to split edges on each face such that there would be 4 triangles on each face of the cube, ensuring symmetry when 
 			subdividing.
